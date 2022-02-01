@@ -1,8 +1,8 @@
-function AddImage({ imgUrl, imgCap }) {
+function AddImage({ imgUrl, imgCap, id }) {
     return (
         <figure className='imgBlock'>
             <img src={imgUrl} alt='photo' />
-            <figcaption>{imgCap}</figcaption>
+            <figcaption className='caption'>{imgCap}</figcaption>
         </figure>
     );
 };

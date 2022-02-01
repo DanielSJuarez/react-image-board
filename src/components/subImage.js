@@ -1,4 +1,8 @@
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
+const id = uuidv4()
+
 function SubImage({submitImg}) {
 
     const [imgUrl, setImgUrl] = useState('');
@@ -9,9 +13,10 @@ function SubImage({submitImg}) {
         if(imgUrl.trim().length === 0){
           return;
         } 
-        submitImg(imgUrl, imgCap);
+        submitImg(imgUrl, imgCap, id);
         setImgUrl('');
         setImgCap('');
+        id();
     }
 
     const imgValueUrl = (e) => {
@@ -30,9 +35,10 @@ function SubImage({submitImg}) {
 
     return (
         <form onSubmit={completeSubmit}>
+            <h1>Add to the collection</h1>
             <div>
-                <input type='text' placeholder='Image URL' value={imgUrl} onChange={imgValueUrl}></input>
-                <input type='text' placeholder='Image Caption' value={imgCap} onChange={imgValueCap}></input>
+                <input className= 'subField'type='text' placeholder='Image URL' value={imgUrl} onChange={imgValueUrl}></input>
+                <input className= 'subField' type='text' placeholder='Image Caption' value={imgCap} onChange={imgValueCap}></input>
             </div>
             <div>
                 <button type='button' onClick={clearField}>CANCEL</button>

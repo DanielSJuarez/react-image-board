@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.imgBlock{
+  width: 50%;
+  margin: 10px auto;
+}
+
+img{
+  border: solid 20px;
+  width: 100%;
+}
+
+img:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+}
+
+button{
+  color: white;
+  background-color: rgb(54, 54, 54);
+  margin: 5px;
+}
+
+button:hover{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  background-color:rgb(104, 10, 10);
+  cursor: pointer;
+}
+
+.caption{
+  font-style: italic;
+}
+
+.subField{
+  width: 40%;
+  margin: 5px;
+}
+
+.subField:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+h1{
+  font-size: 30px;
+}
